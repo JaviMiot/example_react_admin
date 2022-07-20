@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Admin, Resource } from "react-admin";
+import jsonServerProvider from "ra-data-json-server";
 
-function App() {
+import Dashboard from "./components/Dashboard";
+import { UsersList } from "./utils/admin-source/Users";
+import { PostList, PostEdit, PostCreate } from "./utils/admin-source/Posts";
+import authProvider from "./auth/authProvider";
+
+import "./App.css";
+
+import PostIcon from "@mui/icons-material/Book";
+import UserIcon from "@mui/icons-material/Group";
+
+const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Admin
+      dashboard={Dashboard}
+      dataProvider={dataProvider}
+      authProvider={authProvider}
+    >
+      <Resource name="users" list={UsersList} icon={UserIcon} />
+      <Resource
+        name="posts"
+        list={PostList}
+        edit={PostEdit}
+        create={PostCreate}
+        icon={PostIcon}
+      />
+    </Admin>
   );
-}
+};
 
 export default App;
