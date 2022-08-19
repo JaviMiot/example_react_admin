@@ -25,6 +25,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           REACT_APP_DATA_PICKER_MIN_DATE: ${{ secrets.REACT_APP_TITLE }}
         run: |
+          npm install
           npm install -g @aws-amplify/cli --unsafe-perm=true
           bash scripts/init.sh
           amplify publish --yes
