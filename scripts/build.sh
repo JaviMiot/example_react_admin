@@ -1,4 +1,5 @@
 #!/bin/bash
 
 env | grep '^REACT_' > .env
-npm run build
+echo run build
+npx react-scripts build
