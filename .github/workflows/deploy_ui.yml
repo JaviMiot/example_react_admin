@@ -1,7 +1,7 @@
 name: UI Deploy Workflow
 on:
-  push:
-    branches: [main]
+  pull_request:
+    types: [opened, reopened]
 jobs:
   build:
     strategy:
