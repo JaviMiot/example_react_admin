@@ -1,0 +1,43 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-reactadmin-dev-145901-authRole",
+      "UnauthRoleArn": "arn:aws:iam::001654975711:role/amplify-reactadmin-dev-145901-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::001654975711:role/amplify-reactadmin-dev-145901-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-reactadmin-dev-145901-deployment",
+      "UnauthRoleName": "amplify-reactadmin-dev-145901-unauthRole",
+      "StackName": "amplify-reactadmin-dev-145901",
+      "StackId": "arn:aws:cloudformation:us-east-1:001654975711:stack/amplify-reactadmin-dev-145901/5fd51030-1ff9-11ed-b311-1247307e769f",
+      "AmplifyAppId": "d14d69vbts8s03"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d14d69vbts8s03",
+          "type": "manual"
+        }
+      },
+      "function": {
+        "users": {
+          "deploymentBucketName": "amplify-reactadmin-dev-145901-deployment",
+          "s3Key": "amplify-builds/users-39486473377736477279-build.zip"
+        },
+        "user": {},
+        "hello": {
+          "deploymentBucketName": "amplify-reactadmin-dev-145901-deployment",
+          "s3Key": "amplify-builds/hello-6f6b7555325374526476-build.zip",
+          "url": "https://urte6ca9l0.execute-api.us-east-1.amazonaws.com/default/hello"
+        },
+        "helloLayer": {
+          "deploymentBucketName": "amplify-reactadmin-dev-145901-deployment",
+          "s3Key": "amplify-builds/helloLayer-7a4e64502b6c69664476-build.zip"
+        },
+        "reactadminlayerLbd": {
+          "deploymentBucketName": "amplify-reactadmin-dev-145901-deployment",
+          "s3Key": "amplify-builds/reactadminlayerLbd-LambdaLayerVersionaa74c728-build.zip"
+        }
+      }
+    }
+  }
+}

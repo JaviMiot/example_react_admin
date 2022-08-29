@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/layerapi": {
+      "name": "/layerapi",
+      "lambdaFunction": "helloLayer",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
