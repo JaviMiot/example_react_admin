@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   List,
@@ -7,12 +7,7 @@ import {
   EmailField,
   UrlField,
   useRecordContext,
-  SimpleForm,
-  ReferenceInput,
-  SelectInput,
-  TextInput,
-  Create,
-} from "react-admin";
+} from 'react-admin';
 
 type PropsMyUrlField = {
   source: string;

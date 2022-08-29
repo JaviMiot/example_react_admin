@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader } from '@mui/material';
-import Amplify, { API } from 'aws-amplify';
-
+import { Card, CardHeader } from '@mui/material';
+import { API } from 'aws-amplify';
+import { Title } from 'react-admin';
 interface User {
   id: string | number;
   name: string;
@@ -43,7 +43,7 @@ const Dashboard = () => {
   return (
     <Card>
       <CardHeader title={process.env.REACT_APP_TITLE} />
-      <CardContent>React Admin</CardContent>
+      <Title title="React Admin" />
       <div>
         <span>id: {user.id}</span>
         <br />
@@ -53,12 +53,12 @@ const Dashboard = () => {
       <button onClick={getUser}>Get</button>
       <button onClick={getHello}>hello</button>
       <button onClick={getHelloLayer}>helloLayer</button>
-      <CardContent>
+      <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque harum
         amet repellendus ullam dignissimos reiciendis quisquam ducimus a! Quod
         nisi animi eos numquam ea. Deleniti voluptatum harum incidunt iure
         numquam.
-      </CardContent>
+      </p>
     </Card>
   );
 };
